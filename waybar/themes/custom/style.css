@@ -6,7 +6,7 @@
 }
 
 window#waybar {
-    background-color: rgb(23, 34, 34);
+    background-color: #120b0b;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -87,16 +87,16 @@ button {
     color: transparent;
     padding: 0px 0px;
     margin: 0px 0px;
-    background: #C5FFE4;
-    box-shadow: inset 0 10px rgb(23, 34, 34), inset 0 -10px rgb(23, 34, 34), inset 2px 0 rgb(23, 34, 34), inset -2px 0 rgb(23, 34, 34);
+    background: #DAC1C5;
+    box-shadow: inset 0 10px #120b0b, inset 0 -10px #120b0b, inset 2px 0 #120b0b, inset -2px 0 #120b0b;
 }
 
 #workspaces button:hover {
     color: transparent;
     padding: 0px 0px;
     margin: 0px 0px;
-    background: #4DD4D4;
-    box-shadow: inset 0 10px rgb(23, 34, 34), inset 0 -10px rgb(23, 34, 34), inset 2px 0 rgb(23, 34, 34), inset -2px 0 rgb(23, 34, 34);
+    background: #BF777B;
+    box-shadow: inset 0 10px #120b0b, inset 0 -10px #120b0b, inset 2px 0 #120b0b, inset -2px 0 #120b0b;
 }
 
 #workspaces button.focused {
@@ -108,8 +108,8 @@ button {
     color: transparent;
     padding: 0px 0px;
     margin: 0px 0px;
-    background: #4DD4D4;
-    box-shadow: inset 0 10px rgb(23, 34, 34), inset 0 -10px rgb(23, 34, 34), inset 2px 0 rgb(23, 34, 34), inset -2px 0 rgb(23, 34, 34);
+    background: #BF777B;
+    box-shadow: inset 0 10px #120b0b, inset 0 -10px #120b0b, inset 2px 0 #120b0b, inset -2px 0 #120b0b;
 }
 
 
@@ -134,8 +134,9 @@ button {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#custom-weather,
 #mpd {
-    padding: 0 10px;
+    padding: 0 6px;
     color: #ffffff;
 }
 
@@ -144,7 +145,7 @@ button {
 }
 
 #battery {
-    margin: 0 -4px 0 0;
+    margin: 0 0 0 0;
 }
 
 #battery.charging, #battery.plugged {
@@ -153,13 +154,13 @@ button {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: #EE7270;
+        color: #fff;
     }
 }
 
 #battery.critical:not(.charging) {
-    color: #f53c3c;
+    color: #fff;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -172,11 +173,11 @@ label:focus {
 }
 
 #cpu {
-    margin: 0 -4px;
+    margin: 0 0px;
 }
 
 #memory {
-    margin: 0 -4px;
+    margin: 0 0px;
 }
 
 #disk {
@@ -188,19 +189,19 @@ label:focus {
 }
 
 #network {
-    margin: 0 -4px 0px -4px;
+    margin: 0;
 }
 
 #network.disconnected {
-    margin: 0 -4px 0px -4px;
+    margin: 0;
 }
 
 #pulseaudio {
-    margin: 0 -4px 0 -3px;
+    margin: 0;
 }
 
 #pulseaudio.muted {
-    margin: 0 -4px 0px -8px;
+    margin: 0;
 }
 
 #wireplumber {
@@ -303,4 +304,8 @@ label:focus {
 
 #scratchpad.empty {
 	background-color: transparent;
+}
+
+#custom-weather.severe {
+    color: #eb937d;
 }

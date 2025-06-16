@@ -19,7 +19,7 @@
     "modules-left": ["custom/appmenuicon", "battery", "network", "pulseaudio", "cpu", "memory"],
     // "modules-center": ["hyprland/window","hyprland/workspaces"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["clock", "custom/exit"],
+    "modules-right": ["custom/weather","clock", "custom/exit"],
     
     // Modules configuration
     "keyboard-state": {
@@ -115,7 +115,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%YS %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%A, %d %b | %H:%M}  <span size='10pt' color=\"#C5FFE4\">󰥔</span>",
+        "format": "{:%A, %d %b | %H:%M}  <span size='10pt' color=\"#DAC1C5\">󰥔</span>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -206,9 +206,16 @@
         "all-outputs": false,
         "persistent-workspaces": {
             "*": 4,
-            "eDP-1": [ 1,2,3,4,5 ],
-            "DP-2": [ 6,7,8,9,10 ]
+            "DP-2": [ 1,2,3,4,5 ],
+            "eDP-1": [ 6,7,8,9,10 ]
         }
+    },
+    "custom/weather": {
+        "exec": "python ~/.config/waybar/scripts/weather.py",
+        "restart-interval": 300,
+        "return-type": "json",
+        "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
+        // "format-alt": "{alt}",
     }
 }
 

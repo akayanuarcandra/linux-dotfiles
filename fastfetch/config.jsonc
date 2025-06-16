@@ -5,7 +5,8 @@
         "source": "~/.config/fastfetch/logo.txt",
         "padding": {
             "top": 3
-        }
+        },
+        "color": {"1": "#FCE9DB"}
     },
     "display": {
         // "separator": " ➜  "
@@ -24,25 +25,32 @@
             "type": "shell",
             "key": "",
             "format": "{pretty-name}",
-            "keyColor": "32",
+            "keyColor": "33",
         },
         {
             "type": "wm",
             "key": "󰙀",
             "format": "{pretty-name}",
-            "keyColor": "32",
+            "keyColor": "34",
         },
         {
             "type": "cpu",
             "format": "{1}",
             "key": "",
-            "keyColor": "32",
+            "keyColor": "35",
         },
         {
             "type": "gpu",
             "format": "{name}",
             "key": "󰢮",
-            "keyColor": "33",
+            "keyColor": "36",
+            "hideType": "integrated"
+        },
+        {
+            "type": "users",
+            "format": "{name}",
+            "key": "",
+            "keyColor": "37",
         }
         
     ]
