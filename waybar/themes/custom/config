@@ -19,7 +19,7 @@
     "modules-left": ["custom/appmenuicon", "battery", "network", "pulseaudio", "cpu", "memory"],
     // "modules-center": ["hyprland/window","hyprland/workspaces"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/weather","clock", "custom/exit"],
+    "modules-right": ["custom/spotify","custom/weather","clock", "custom/exit"],
     
     // Modules configuration
     "keyboard-state": {
@@ -119,11 +119,11 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "<span color=\"#E8B9C2\"></span> {usage}%",
+        "format": "<span color=\"#E8B9C2\"></span>   {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "<span color=\"#ACECC0\"></span> {}%"
+        "format": "<span color=\"#ACECC0\"></span>   {}%"
     },
     "temperature": {
         "critical-threshold": 80,
@@ -143,12 +143,12 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "<span size='11pt' color=\"#D0CBE7\">{icon}</span> {capacity}%",
-        "format-charging": "<span color=\"#D0CBE7\"></span> {capacity}%",
-        "format-charging-alt": "<span color=\"#D0CBE7\"></span> {capacity}%",
-        "format-plugged": "<span color=\"#D0CBE7\"></span> {capacity}%",
-        "format-plugged-alt": "<span color=\"#D0CBE7\"></span> {capacity}%",
-        "format-alt": "<span size='11pt' color=\"#D0CBE7\">{icon}</span> {capacity}% | {time}",
+        "format": "<span size='11pt' color=\"#D0CBE7\">{icon}</span>  {capacity}%",
+        "format-charging": "<span color=\"#D0CBE7\"></span>  {capacity}%",
+        "format-charging-alt": "<span color=\"#D0CBE7\"></span>  {capacity}%",
+        "format-plugged": "<span color=\"#D0CBE7\"></span>  {capacity}%",
+        "format-plugged-alt": "<span color=\"#D0CBE7\"></span>  {capacity}%",
+        "format-alt": "<span size='11pt' color=\"#D0CBE7\">{icon}</span>  {capacity}% | {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["󰂎", "󰁼", "󰁾", "󰂀", "󰁹"]
@@ -172,8 +172,8 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "<span color=\"#BFFBF6\">{icon}</span> {volume}%",
-        "format-bluetooth": "<span color=\"#BFFBF6\">{icon}</span> {volume}%",
+        "format": "<span color=\"#BFFBF6\">{icon}</span>  {volume}%",
+        "format-bluetooth": "<span color=\"#BFFBF6\">{icon}</span>  {volume}%",
         "format-bluetooth-muted": "<span color=\"#BFFBF6\">{icon}</span>×'",
         "format-muted": "<span color=\"#BFFBF6\"> </span>",
         "format-source": "<span color=\"#BFFBF6\">{volume}%</span> ",
@@ -185,7 +185,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": ["", "", ""]
+            "default": ["", " ", "  ", "  "]
         },
         "on-click": "pavucontrol"
     },
@@ -216,6 +216,14 @@
         "return-type": "json",
         "on-click": "xdg-open https://weather.com/en-IN/weather/today/l/$(location_id)"
         // "format-alt": "{alt}",
+    },
+    "custom/spotify": {
+        "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+        "format": "{}  <span size='10.6pt' color=\"#FFCCFA\">󰧱</span>",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
     }
 }
 

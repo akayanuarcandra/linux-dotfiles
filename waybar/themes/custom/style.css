@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "product sans", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "product sans", "GeistMono Nerd Font", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica,Arial, sans-serif;
     font-size: 12px;
     border-radius: 10px;
 }
@@ -119,6 +119,7 @@ button {
 }
 
 #clock,
+#custom-spotify,
 #battery,
 #batteryIcon,
 #cpu,
@@ -308,4 +309,8 @@ label:focus {
 
 #custom-weather.severe {
     color: #eb937d;
+}
+
+.custom-spotify {
+    color: white;
 }
