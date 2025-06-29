@@ -173,7 +173,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "<span color=\"#BFFBF6\">{icon}</span>  {volume}%",
-        "format-bluetooth": "<span color=\"#BFFBF6\">{icon}</span>  {volume}%",
+        "format-bluetooth": "<span color=\"#BFFBF6\">{icon}</span> {volume}%",
         "format-bluetooth-muted": "<span color=\"#BFFBF6\">{icon}</span>×'",
         "format-muted": "<span color=\"#BFFBF6\"> </span>",
         "format-source": "<span color=\"#BFFBF6\">{volume}%</span> ",
