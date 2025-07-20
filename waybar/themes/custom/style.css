@@ -1,7 +1,7 @@
 @define-color background-base #1E0C0F;
 @define-color text-color #FFFEF1;
-@define-color workspace-base #D0A972;
-@define-color workspace-focused #9D7449;
+@define-color workspace-base #F9DFA0;
+@define-color workspace-focused #D48148;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
