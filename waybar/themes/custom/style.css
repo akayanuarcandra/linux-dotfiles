@@ -1,7 +1,9 @@
 @define-color background-base #131313;
-@define-color text-color #FFFEF1;
-@define-color workspace-base #F9DFA0;
-@define-color workspace-focused #D48148;
+@define-color text-color #EEFFFF;
+@define-color workspace-base #88ga .
+A0A9;
+/* @define-color workspace-base #2E5676; */
+@define-color workspace-focused #C7FDFF;
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -13,6 +15,7 @@
 window#waybar {
     background-color: @background-base;
     color: @text-color;
+    /* opacity: 0.9; */
     transition-property: background-color;
     transition-duration: .5s;
     border-radius: 10px;
