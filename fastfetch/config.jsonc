@@ -6,7 +6,7 @@
         "padding": {
             "top": 3
         },
-        "color": {"1": "#FCE9DB"}
+        "color": {"1": "#125656"}
     },
     "display": {
         // "separator": " ➜  "
@@ -17,39 +17,39 @@
         "break",
         {
             "type": "os",
-            "key": "",
+            "key": " ",
             "format": "{name}",
-            "keyColor": "32", // = color1
+            "keyColor": "34", // = color1
         },
         {
             "type": "shell",
-            "key": "",
+            "key": " ",
             "format": "{pretty-name}",
             "keyColor": "33",
         },
         {
             "type": "wm",
-            "key": "󰙀",
+            "key": "󰙀 ",
             "format": "{pretty-name}",
-            "keyColor": "34",
+            "keyColor": "35",
         },
         {
             "type": "cpu",
             "format": "{1}",
-            "key": "",
-            "keyColor": "35",
+            "key": " ",
+            "keyColor": "32",
         },
         {
             "type": "gpu",
             "format": "{name}",
-            "key": "󰢮",
+            "key": "󰢮 ",
             "keyColor": "36",
             "hideType": "integrated"
         },
         {
             "type": "users",
             "format": "{name}",
-            "key": "",
+            "key": " ",
             "keyColor": "37",
         }
         
