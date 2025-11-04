@@ -54,7 +54,7 @@
     },
 
     "custom/appmenuicon": {
-    "format": "",
+    "format": " ",
     "on-click": "sleep 0.2;rofi -show drun -replace",
     "on-click-right": "~/.config/hypr/scripts/keybindings.sh",
     "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
@@ -116,14 +116,19 @@
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%YS %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%A, %d %b | %H:%M}  <span size='10pt' color=\"#DAC1C5\">󰥔</span>  ",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}  <span size='10pt' color=\"#DAC1C5\">󰥔</span>  ",
+        "on-click-right": "gnome-calendar",
+        "on-click": ""
     },
     "cpu": {
         "format": "<span color=\"#E8B9C2\"></span>   {usage}%",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "btop"
     },
     "memory": {
-        "format": " <span color=\"#ACECC0\"></span>   {}%"
+        "format": "<span color=\"#ACECC0\"></span>   {}%",
+        "on-click": "btop"
+
     },
     "temperature": {
         "critical-threshold": 80,
@@ -143,15 +148,16 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "   <span size='11pt' color=\"#D0CBE7\">{icon}</span>",
-        "format-charging": "<span color=\"#D0CBE7\"></span>",
+        "format": "<span size='11pt' color=\"#D0CBE7\">{icon}</span>",
+        "format-charging": "<span color=\"#D0CBE7\"></span><span size= '9pt'> </span>",
         "format-charging-alt": "<span color=\"#D0CBE7\"></span>  {capacity}%",
-        "format-plugged": "<span color=\"#D0CBE7\"></span>",
+        "format-plugged": "<span color=\"#D0CBE7\"></span><span size= '9pt'> </span>",
         "format-plugged-alt": "<span color=\"#D0CBE7\"></span>  {capacity}%",
-        "format-alt": "<span size='11pt' color=\"#D0CBE7\">{icon}</span>  {capacity}% | {time}",
+        "format-alt": "<span size='11pt' color=\"#D0CBE7\">{icon}</span>  {capacity}%",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["󰂎", "󰁼", "󰁾", "󰂀", "󰁹"]
+        // "format-icons": ["", "", "", "", ""]
     },
 
     "battery#bat2": {
@@ -167,13 +173,13 @@
         "format-alt": "<span size='10.4pt' color=\"#F9DFB1\">{icon}</span>   {essid} | {signalStrength}%",
         "format-icons": ["󰤟","󰤢","󰤥","󰤨"],
         "on-click": " ",
-        "on-click-right": "~/.config/ml4w/settings/networkmanager.sh"
+        "on-click-right": "cd ~/Applications/nmgui && nmgui"
     },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "<span color=\"#BFFBF6\">{icon}</span>",
-        "format-alt": "<span color=\"#BFFBF6\">{icon}</span> {volume}%",
+        "format-alt": "<span color=\"#BFFBF6\">{icon}</span>   {volume}%",
         "format-bluetooth": "<span color=\"#BFFBF6\">{icon}</span>",
         "format-bluetooth-alt": "<span color=\"#BFFBF6\">{icon}</span> {volume}%",
         "format-bluetooth-muted": "<span color=\"#BFFBF6\">{icon}</span>×'",
@@ -187,7 +193,7 @@
             "phone": "",
             "portable": "",
             "car": "",
-            "default": [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "  ", "  "]
+            "default": [" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
         },
         "on-click": "",
         "on-click-right": "pavucontrol"
