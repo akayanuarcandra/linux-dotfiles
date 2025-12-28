@@ -1,0 +1,26 @@
+{
+  "bar": {
+    "status": {
+      "showAudio": true,
+      "showBattery": true,
+      "showBluetooth": true,
+      "showKbLayout": false,
+      "showMicrophone": false,
+      "showNetwork": true,
+      "showLockStatus": true
+    }
+  },
+  "background": {
+    "desktopClock": {
+      "enabled": false
+    },
+    "enabled": true,
+    "visualiser": {
+      "blur": false,
+      "enabled": true,
+      "autoHide": true,
+      "rounding": 1,
+      "spacing": 1
+    }
+  }
+}
