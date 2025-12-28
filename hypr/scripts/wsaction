@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+GROUP=""
+if [ "$1" = "-g" ]; then
+    GROUP=1
+    shift
+fi
+
+if [ "$#" -ne 2 ]; then
+    echo "Wrong number of arguments. Usage: $0 [-g] <dispatcher> <workspace>"
+    exit 1
+fi
+
+ACTIVE_WS=$(hyprctl activeworkspace -j | jq -r '.id')
+
+if [ -n "$GROUP" ]; then
+    # Move to group
+    TARGET=$(( ($2 - 1) * 10 + ACTIVE_WS % 10 ))
+    hyprctl dispatch "$1" "$TARGET"
+else
+    # Move to ws in group
+    TARGET=$(( (($ACTIVE_WS - 1) / 10) * 10 + $2 ))
+    hyprctl dispatch "$1" "$TARGET"
+fi
